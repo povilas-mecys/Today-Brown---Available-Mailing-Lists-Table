@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Mailing Lists</title>
+
+
+</head>
+
+<body>
+  <style>
+    :root {
+      /* -------------------------
+     Typography
+     ------------------------- */
+      --font-sans: CircularStd, Arial, Helvetica, sans-serif;
+      --font-serif: "Minion Pro", Georgia, serif;
+
+      --font-size-base: 16px;
+      --font-size-small: 14px;
+      --font-size-body-large: 20px;
+      --font-size-caption: 2rem;
+
+      --font-weight-regular: 400;
+      --font-weight-bold: 600;
+
+      --line-height-body: 1.75;
+      --letter-spacing-wide: 1px;
+
+      /* -------------------------
+     Colors
+     ------------------------- */
+      --color-text: #434343;
+      --color-border: #eaeaea;
+      --color-header-bg: #ffffff;
+
+      --color-row-alt: color-mix(in srgb, #eaeaea 70%, #ffffff 100%);
+      --color-row-hover: color-mix(in srgb, #cccccc 80%, #ffffff 100%);
+
+      --color-rowgroup-bg: #687078;
+      --color-rowgroup-text: #ffffff;
+
+      --color-action-bg: #008672;
+      --color-action-text: #ffffff;
+      --color-action-hover: color-mix(in srgb, #008672 100%, black 50%);
+
+      /* -------------------------
+     Spacing & Layout
+     ------------------------- */
+      --space-cell: 1rem;
+      --space-section-vertical: 60px;
+      --space-link-padding: 24px;
+
+      --table-min-width: 600px;
+
+      /* -------------------------
+     Borders & Radius
+     ------------------------- */
+      --radius-small: 4px;
+
+      /* -------------------------
+     Transitions
+     ------------------------- */
+      --transition-fast: 0.25s ease;
+
+      /* -------------------------
+     Breakpoints
+     ------------------------- */
+      --breakpoint-mobile: 740px;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      padding: var(--space-section-vertical) 0;
+    }
+
+    table {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-base);
+      color: var(--color-text);
+    }
+
+    /* Caption */
+    caption {
+      caption-side: top;
+      padding: var(--space-cell);
+      text-align: left;
+      font-size: var(--font-size-caption);
+      color: var(--color-text);
+    }
+
+    /* Table Header */
+    thead th {
+      padding: var(--space-cell);
+      background-color: var(--color-header-bg);
+      color: var(--color-text);
+      font-size: var(--font-size-small);
+      font-weight: var(--font-weight-bold);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* Table Body Cells */
+    tbody th,
+    tbody td {
+      padding: var(--space-cell);
+      font-size: var(--font-size-small);
+      vertical-align: top;
+    }
+
+    tbody td {
+      color: var(--color-text);
+    }
+
+    tbody td:first-child {
+      font-weight: var(--font-weight-bold);
+    }
+
+    /* Zebra Striping & Hover */
+    tbody tr:nth-child(even) {
+      background-color: var(--color-row-alt);
+    }
+
+    tbody tr:hover {
+      background-color: var(--color-row-hover);
+    }
+
+    /* Numeric Column */
+    thead th:nth-child(3),
+    tbody td:nth-child(3) {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* Row Groups */
+    tbody tr:has(th[scope="rowgroup"]) {
+      background-color: var(--color-rowgroup-bg);
+      color: var(--color-rowgroup-text);
+    }
+
+    tbody tr:has(th[scope="rowgroup"]) td,
+    tbody th[scope="rowgroup"] {
+      color: var(--color-rowgroup-text);
+      font-weight: var(--font-weight-bold);
+      text-align: left;
+    }
+
+    /* Responsive */
+    @media (max-width: var(--breakpoint-mobile)) {
+      table {
+        min-width: var(--table-min-width);
+      }
+    }
+
+    /* Wrapper Content */
+    .table-wrapper header {
+      padding: 0 0 var(--space-section-vertical) 0;
+    }
+
+    .table-wrapper p {
+      font-family: var(--font-serif);
+      font-size: var(--font-size-body-large);
+      line-height: var(--line-height-body);
+    }
+
+    .table-wrapper a {
+      display: inline-block;
+      padding: var(--space-link-padding);
+      background-color: var(--color-action-bg);
+      border-radius: var(--radius-small);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-small);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-action-text);
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-wide);
+      transition: background-color var(--transition-fast);
+    }
+
+    .table-wrapper a:hover,
+    .table-wrapper a:focus {
+      background-color: var(--color-action-hover);
+    }
+  </style>
+  <div class="table-wrapper">
+    <header>
+      <p>Today@Brown messages can be sent to the entire community or segmented by specific audience groups. This
+        breakdown
+        provides the membership criteria and approximate recipient count for each segment to help you determine the most
+        relevant audience for your post. Please target your posting to those most affected or interested in your
+        message.
+        Items
+        submitted with the incorrect or extraneous audience group will be rejected.</p>
+
+      <a href="https://today.brown.edu/submit">Submit Items to Today@Brown</a>
+    </header>
+    <table>
+      <caption>Available Mailing Lists</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Group</th>
+          <th scope="col">Description</th>
+          <th scope="col">Approx. #</th>
+        </tr>
+      </thead>
+
+      <!-- STUDENTS -->
+      <tbody>
+        <tr>
+          <th scope="rowgroup">All Students</th>
+          <td>Undergraduate + Graduate + Medical Students lists</td>
+          <td>8,050</td>
+        </tr>
+
+        <tr>
+          <td>All Undergraduates</td>
+          <td>All active 1st, 2nd, 3rd and 4th year students. Includes students on leave.</td>
+          <td>6,000</td>
+        </tr>
+
+        <tr>
+          <td>1st Year Students</td>
+          <td>All active undergrads, semesters 0, 1 &amp; 2</td>
+          <td>1,575</td>
+        </tr>
+
+        <tr>
+          <td>2nd Year Students</td>
+          <td>All active undergrads, semesters 3 &amp; 4</td>
+          <td>1,435</td>
+        </tr>
+
+        <tr>
+          <td>3rd Year Students</td>
+          <td>All active undergrads, semesters 5 &amp; 6</td>
+          <td>1,715</td>
+        </tr>
+
+        <tr>
+          <td>4th Year Students</td>
+          <td>All active undergrads, semesters 7 &amp; up</td>
+          <td>1,270</td>
+        </tr>
+
+        <tr>
+          <td>All Graduate Students</td>
+          <td>
+            All active graduate students plus all OIP (Office of International Programs)
+            and JCB (John Carter Brown) fellows. Includes students on leave.
+          </td>
+          <td>1,600</td>
+        </tr>
+
+        <tr>
+          <td>Humanities Graduate Students</td>
+          <td>All active graduate students in the humanities</td>
+          <td>405</td>
+        </tr>
+
+        <tr>
+          <td>Physical Sciences Graduate Students</td>
+          <td>All active graduate students in the physical sciences</td>
+          <td>547</td>
+        </tr>
+
+        <tr>
+          <td>Social Sciences Graduate Students</td>
+          <td>All active graduate students in the social sciences</td>
+          <td>416</td>
+        </tr>
+
+        <tr>
+          <td>Life Sciences Biomed Grad Students</td>
+          <td>All active graduate students in life sciences (biomed)</td>
+          <td>308</td>
+        </tr>
+
+        <tr>
+          <td>Life Sciences Non-Biomed Grad Students</td>
+          <td>All active graduate students in life sciences (non-biomed)</td>
+          <td>55</td>
+        </tr>
+
+        <tr>
+          <td>Medical Students</td>
+          <td>All active medical students. Includes students on leave.</td>
+          <td>340</td>
+        </tr>
+      </tbody>
+
+      <!-- FACULTY -->
+      <tbody>
+        <tr>
+          <th scope="rowgroup">All Faculty</th>
+          <td>Campus + Hospital faculty lists</td>
+          <td>2,000</td>
+        </tr>
+
+        <tr>
+          <td>Campus Faculty</td>
+          <td>
+            Includes active faculty, those exempt staff with faculty appointments,
+            post-doctoral fellows, research house staff officers, and faculty emeritus
+          </td>
+          <td>1,400</td>
+        </tr>
+
+        <tr>
+          <td>Hospital Faculty</td>
+          <td>
+            All active medical faculty. Does NOT include clinical voluntary,
+            research house staff officers, post-doctoral or emeritus.
+          </td>
+          <td>600</td>
+        </tr>
+      </tbody>
+
+      <!-- STAFF -->
+      <tbody>
+        <tr>
+          <th scope="rowgroup">All Staff</th>
+          <td>
+            All Exempt + Non-exempt + Union + Limited Duration staff lists.
+            Does NOT include student employees.
+          </td>
+          <td>3,380</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
